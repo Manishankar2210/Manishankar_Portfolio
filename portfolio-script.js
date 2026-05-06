@@ -75,21 +75,8 @@ window.addEventListener('scroll', () => {
 // Form submission handler
 const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const email = contactForm.querySelector('input[type="email"]').value;
-    const message = contactForm.querySelector('textarea').value;
-    
-    // Simple validation
-    if (name && email && message) {
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-    }
-});
+// Removed custom submit handler to allow standard HTML form submission to FormSubmit
+
 
 // Add animation on scroll for project cards
 const observerOptions = {
